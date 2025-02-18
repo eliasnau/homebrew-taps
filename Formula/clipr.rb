@@ -5,10 +5,8 @@ class Clipr < Formula
   sha256 "710cd5173e1a9a184a461a2de15ab8b3db5b1c97b6078e935dba1f1b10fdca2b"
   license "MIT"
 
-  depends_on "rust" => :build
-
   def install
-    system "cargo", "install", "--root", prefix, "--path", "."
+    bin.install "clipr"
   end
 
   test do
